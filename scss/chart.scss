@@ -1,0 +1,130 @@
+@import "reset";
+@import "colors";
+@import "grid";
+@import "header";
+@import "navbar";
+
+main {
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    bottom: unset;
+    .title {
+      margin-top: 2.5rem;
+      margin-bottom: 3rem;
+      position: relative;
+      font-family: "Poppins", sans-serif;
+      font-size: 3.5rem;
+      font-weight: 400;
+      line-height: 2.4rem;
+      letter-spacing: 0.02rem;
+      text-align: center;
+      color: $letterhome;
+      text-align: center;
+      width: 100%;
+    }
+    .coisas {
+      width: 100%;
+      max-width: 112rem;
+      .cards {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        .card {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          width: 33%;
+          max-width: 35.2rem;
+          height: 10.8rem;
+          flex-shrink: 0;
+          background-color: $white;
+          border-radius: 0.8rem;
+          .elipse {
+            width: 7rem;
+            height: 7rem;
+            border-radius: 50%;
+            background-color: rgba(51, 214, 159, 0.07);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          h3 {
+            color: $letterhome;
+            font-family: Poppins;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 2rem; /* 125% */
+            letter-spacing: 0.016rem;
+          }
+          h4 {
+            color: #a6acbe;
+            font-family: Poppins;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.014rem;
+          }
+        }
+      }
+      .quadro {
+        width: 100%;
+        max-width: 112rem;
+        background-color: $white;
+        margin: 2rem 0;
+        border-radius: 0.8rem;
+        height: 30rem;
+        h2 {
+          padding-top: 1rem;
+          text-align: center;
+          color: $letterhome;
+          font-family: "Poppins", sans-serif;
+          font-size: 2.2rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 3.2328rem; /* 171.429% */
+          letter-spacing: 0.0189rem;
+        }
+
+        .estoques {
+          margin-top: 2rem;
+          h3 {
+            text-align: center;
+            color: $letterhome;
+            font-family: "Poppins", sans-serif;
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3.2328rem; /* 171.429% */
+            letter-spacing: 0.0189rem;
+          }
+          ul {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            li {
+              width: 33%;
+              max-width: 30rem;
+              align-items: center;
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              h4 {
+                color: #a6acbe;
+                font-family: Poppins;
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.014rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

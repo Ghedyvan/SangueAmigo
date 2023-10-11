@@ -1,0 +1,53 @@
+@import "reset";
+@import "colors";
+@import "grid";
+
+.containeer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  img {
+    width: 100%;
+    max-width: 50rem;
+  }
+  h1 {
+    color: $letterhome;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4.4rem; /* 122.222% */
+    letter-spacing: -0.036rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    width: 100%;
+    max-width: 54rem;
+    color: var(--gray-50, var(--gray-50, #858c95));
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem; /* 150% */
+    letter-spacing: -0.016rem;
+  }
+  button {
+    margin-top: 2rem;
+    width: 35.2rem;
+    height: 5.6rem;
+    border-radius: 0.8rem;
+    background: $red;
+    color: $white;
+    text-align: center;
+    font-family: "Archivo", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.6rem;
+    margin-bottom: 4rem;
+  }
+}

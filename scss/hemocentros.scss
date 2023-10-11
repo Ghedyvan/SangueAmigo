@@ -6,6 +6,19 @@
 
 main {
   .container {
+    .title{
+      margin-top: 2rem;
+      position: relative;
+      font-family: "Poppins", sans-serif;
+      font-size: 3.5rem;
+      font-weight: 400;
+      line-height: 2.4rem; /* 120% */
+      letter-spacing: 0.02rem;
+      text-align: center;
+      color: $letterhome;
+      text-align: center;
+      width: 100%;
+    }
     h2 {
       color: var(--texts-base, #6a6180);
       font-family: Poppins;
@@ -14,8 +27,8 @@ main {
       font-weight: 400;
       line-height: 2.6rem; /* 100% */
       margin-top: 3.2rem;
-      margin-left: 2.8rem;
       margin-bottom: 3.9rem;
+      text-align: center;
     }
     .first-box {
       background: #e6e6f2;
@@ -23,7 +36,6 @@ main {
       display: flex;
       border-radius: 10rem;
       height: 6.3rem;
-      justify-content: space-around;
       align-items: center;
       p {
         color: #6e6893;

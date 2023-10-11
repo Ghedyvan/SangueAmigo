@@ -1,0 +1,62 @@
+@mixin responsive($ScreenWidth) {
+  @media (max-width: $ScreenWidth) {
+    @content;
+  }
+}
+
+@mixin style-btn($height, $bg, $bgHover) {
+  color: $white;
+  display: inline-block;
+  height: $height;
+  background-color: $bg;
+  border-radius: 6px;
+  padding: 0px 5rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $vermelhoescuro;
+    color: $white;
+  }
+}
+
+@mixin card-style($bgcolor, $h3color, $pcolor, $bgicon) {
+  border-radius: 5%;
+  background-color: $bgcolor;
+  max-width: 28rem;
+  height: 32.3rem;
+  .imagem {
+    padding: 4.1rem 17.4rem 3rem 4.2rem;
+    .retangulo {
+      max-width: 6.4rem;
+      max-height: 6.4rem;
+      border-radius: 20%;
+      background-color: $bgicon;
+      .icon {
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+        align-items: center;
+      }
+    }
+  }
+  .texts {
+    h3 {
+      color: $h3color;
+      font-family: "Lato", sans-serif;
+      font-weight: 800;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      padding: 0 13.2rem 2rem 4.2rem;
+    }
+    p {
+      font-family: "Lato";
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 165%;
+      color: $pcolor;
+      padding: 0 3.4rem 6.8rem 4.2rem;
+    }
+  }
+}

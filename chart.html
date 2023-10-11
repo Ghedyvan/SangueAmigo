@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/chart.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="./img/title.png" />
+    <title>Sangue Amigo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&family=Poppins:wght@400;500;700&family=Prosto+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="user">
+        <button onclick="perfil()">
+          <div class="text">
+            <p>Larissa Santana</p>
+            <h2>O+</h2>
+          </div>
+          <div class="arrow">
+            <img src="./img/bloodicon.svg" alt="" />
+            <img src="./img/icon/more.svg" alt="" />
+          </div>
+          <div class="divisor">
+            <img src="./img/linetop.svg" alt="" />
+          </div>
+        </button>
+        <a href="./index.html"
+          ><button>
+            <img src="./img/icon/logout.svg" alt="" /></button
+        ></a>
+      </div>
+    </header>
+    <nav>
+      <div class="block"></div>
+      <div class="icons">
+        <a href="./home.html">
+          <button>
+            <img src="./img/home.svg" alt="" class="imgselected" />
+            <img src="./img/homeWhite.svg" alt="" class="imgnotselected" />
+          </button>
+          <p>Início</p>
+        </a>
+        <a href="./hemocentros.html">
+          <button>
+            <img src="./img/viewlistlarge.svg" alt="" class="imgnotselected" />
+            <img
+              src="./img/viewlistlargeSelected.svg"
+              alt=""
+              class="imgselected"
+            />
+          </button>
+          <p class="menor">Hemocentros</p>
+        </a>
+        <a href="./map.html">
+          <button>
+            <img src="./img/map.svg" alt="" class="imgnotselected" />
+            <img src="./img/mapSelected.svg" alt="" class="imgselected" />
+          </button>
+          <p>Mapa</p>
+        </a>
+        <a href="./chart.html">
+          <button class="selected">
+            <img src="./img/line chart.svg" alt="" class="imgnotselected" />
+            <img
+              src="./img/line chartSelected.svg"
+              alt=""
+              class="imgselected"
+            />
+          </button>
+          <p>Estatísticass</p>
+        </a>
+        <a href="./profile.html">
+          <button>
+            <img src="./img/userid.svg" alt="" class="imgnotselected" />
+            <img src="./img/useridSelected.svg" alt="" class="imgselected" />
+          </button>
+          <p>Perfil</p>
+        </a>
+        <a href="./novadoacao.html">
+          <button>
+            <img src="./img/novadoacao.svg" alt="" class="imgnotselected" />
+            <img src="./img/novadoacaoSelected.svg" alt="" class="imgselected" />
+          </button>
+          <p>Cadastrar<br>doação</p>
+        </a>
+        
+      </div>
+      <div class="img">
+        <img src="./img/gotasidebar.svg" alt="" class="imgnotselected" />
+        <div class="title">Sangue Amigo</div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <h2 class="title">Estatísticas</h2>
+        <div class="coisas">
+          <div class="cards">
+            <div class="card">
+              <div class="elipse">
+                <img src="./img/calendar.svg" alt="">
+              </div>
+              <div class="texts">
+                <h3>Próxima doação</h3>
+                <h4>Em 3 meses</h4>
+              </div>
+            </div>
+            <div class="card">
+              <div class="elipse">
+                <img src="./img/hemocentro.svg" alt="">
+              </div>
+              <div class="texts">
+                <h3>Mais precisa de você</h3>
+                <h4>Hemoal</h4>
+              </div>
+            </div>
+            <div class="card">
+              <div class="elipse">
+                <img src="./img/alert.svg" alt="">
+              </div>
+              <div class="texts">
+                <h3>Estado do banco</h3>
+                <h4>Crítico</h4>
+              </div>
+            </div>
+          </div>
+          <div class="quadro">
+            <h2>Estoques do seu tipo sanguíneo</h2>
+            <div class="estoques">
+              <table>
+                <tbody>
+                  <ul>
+                    <li><h3>Hemoal</h3><img src="./img/critico.svg" alt="" style="width: 13rem;"><h4 style="color: red;">Crítico</h4></li>
+                    <li><h3>Hemopac</h3><img src="./img/estavel.svg" alt="" style="width: 13rem;"><h4>Estável</h4></li>
+                    <li><h3>Santa Casa de Maceió</h3><img src="./img/estavel.svg" alt="" style="width: 13rem;"><h4>Estável</h4></li>
+                  </ul>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </main>
+  </body>
+  <script>
+     function perfil() {
+      window.location.href = "profile.html";
+    }
+  </script>
+</html>

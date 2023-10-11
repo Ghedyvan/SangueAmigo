@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    
     <link rel="stylesheet" href="./css/hemocentros.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="./img/title.png" />
+    <title>Sangue Amigo</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&family=Inter:wght@600&family=Overpass:ital,wght@1,100&family=Poppins:wght@400;500;700&family=Prosto+One&display=swap"
       rel="stylesheet"
@@ -21,7 +23,7 @@
   <body>
     <header>
       <div class="user">
-        <button>
+        <button onclick="perfil()">
           <div class="text">
             <p>Larissa Santana</p>
             <h2>O+</h2>
@@ -48,12 +50,25 @@
             <img src="./img/home.svg" alt="" class="imgselected" />
             <img src="./img/homeWhite.svg" alt="" class="imgnotselected" />
           </button>
+          <p>Início</p>
+        </a>
+        <a href="./hemocentros.html">
+          <button class="selected">
+            <img src="./img/viewlistlarge.svg" alt="" class="imgnotselected" />
+            <img
+              src="./img/viewlistlargeSelected.svg"
+              alt=""
+              class="imgselected"
+            />
+          </button>
+          <p class="menor">Hemocentros</p>
         </a>
         <a href="./map.html">
           <button>
             <img src="./img/map.svg" alt="" class="imgnotselected" />
             <img src="./img/mapSelected.svg" alt="" class="imgselected" />
           </button>
+          <p>Mapa</p>
         </a>
         <a href="./chart.html">
           <button>
@@ -64,28 +79,27 @@
               class="imgselected"
             />
           </button>
+          <p>Estatísticass</p>
         </a>
-
         <a href="./profile.html">
           <button>
             <img src="./img/userid.svg" alt="" class="imgnotselected" />
             <img src="./img/useridSelected.svg" alt="" class="imgselected" />
           </button>
+          <p>Perfil</p>
         </a>
-
-        <a href="./hemocentros.html">
-          <button class="selected">
-            <img src="./img/viewlistlarge.svg" alt="" class="imgnotselected" />
-            <img
-              src="./img/viewlistlargeSelected.svg"
-              alt=""
-              class="imgselected"
-            />
+        <a href="./novadoacao.html">
+          <button>
+            <img src="./img/novadoacao.svg" alt="" class="imgnotselected" />
+            <img src="./img/novadoacaoSelected.svg" alt="" class="imgselected" />
           </button>
+          <p>Cadastrar<br>doação</p>
         </a>
+        
       </div>
       <div class="img">
         <img src="./img/gotasidebar.svg" alt="" class="imgnotselected" />
+        <div class="title">Sangue Amigo</div>
       </div>
     </nav>
 
@@ -122,4 +136,9 @@
       </div>
     </main>
   </body>
+  <script>
+     function perfil() {
+      window.location.href = "profile.html";
+    }
+  </script>
 </html>

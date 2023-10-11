@@ -2,39 +2,138 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=PT+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./img/title.png" />
+    <title>Sangue Amigo</title>
   </head>
   <body>
-    <main>
-      <div class="contaainer">
-        <div class="login-box">
-          <h1>Entrar</h1>
-          <form action="./home.html">
-            <div class="entradas">
-                <input type="text" name="login" id="login" placeholder="Usuário" />
-                <input type="password" name="password" id="password" placeholder="Senha"/>
-            </div>
-            <div class="conjunto">
-              <div class="left">
-                <input type="checkbox" name="checkbox" id="checkbox" />
-                <label for="checkbox">Lembrar-me</label>
-              </div>
-              <div class="right">
-                <a href="./recoverpass.html"><p>Esqueci minha senha</p></a>
-              </div>
-            </div>
-            <button type="submit">Entrar</button>
-          </form>
-          <a href="./cadastro.html">Criar conta</a>
+    <header>
+      <div class="container">
+        <div class="imagem">
+          <img src="./img/logoSangueWhite.svg" alt="logo KingHost" />
+        </div>
+        <div class="botoes">
+          <div class="teste">
+            <a href="./login.html"><button>Entrar</button></a>
+          </div>
         </div>
       </div>
-    </main>
+    </header>
+    <div class="hero">
+      <div class="rectangle1">
+        <div class="container">
+          <div class="text-hero">
+            <h1>A plataforma Nº1 para doação de Sangue em Alagoas!</h1>
+            <p>Doar sangue é um ato nobre, seja herói nessa história.</p>
+            <a href="./login.html"><button>Acesse gratuitamente</button></a>
+            <div class="recursos" onclick="rolarParaSecao()">
+              <img src="./img/setaSA.svg" alt="" />
+              <span>Conheça os recursos</span>
+            </div>
+          </div>
+          <div class="img-hero">
+            <div class="desktop">
+              <img src="./img/health (1).png" alt="" />
+            </div>
+            <div class="mobile">
+              <img src="./img/health (1).png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="semi-hero" id="secao-alvo">
+      <div class="container">
+        <div class="textos">
+          <h2>Conheça os recursos da plataforma Sangue Amigo</h2>
+          <p>Mais de <strong>500 doadores</strong> utilizam ♥</p>
+        </div>
+        <div class="cards">
+          <div class="card-01">
+            <div class="imagem">
+              <div class="retangulo">
+                <div class="icon">
+                  <img src="./img/profile.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="texts">
+              <h3>Perfil pessoal</h3>
+              <p>
+                Saiba sempre que você puder realizar uma nova doação e descubra
+                se está apto sem sair de casa.
+              </p>
+            </div>
+          </div>
+          <div class="card-02">
+            <div class="imagem">
+              <div class="retangulo">
+                <div class="icon">
+                  <img src="./img/maplp.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="texts">
+              <h3>Mapa</h3>
+              <p>
+                Navegue pelo mapa do estado e descubra os hemocentros que estão
+                de portas abertas para você.
+              </p>
+            </div>
+          </div>
+          <div class="card-03">
+            <div class="imagem">
+              <div class="retangulo">
+                <div class="icon">
+                  <img src="./img/graph.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="texts">
+              <h3>Estatísticas</h3>
+              <p>
+                Confira as estatísticas a respeito dos bancos de sangue em cada
+                hemocentro e saiba quem mais precisa.
+              </p>
+            </div>
+          </div>
+          <div class="card-04">
+            <div class="imagem">
+              <div class="retangulo">
+                <div class="icon">
+                  <img src="./img/nextHemo.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="texts">
+              <h3>Hemocentros próximos</h3>
+              <p>
+                Veja uma lista com todos os hemocentros que estão próximos da
+                sua localização e descubra onde pode doar.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="barrinha"></div>
+      </div>
+    </div>
   </body>
+  <script>
+    function rolarParaSecao() {
+      const secaoAlvo = document.getElementById("secao-alvo");
+      const posicaoAlvo = secaoAlvo.offsetTop;
+      window.scrollTo({
+        top: posicaoAlvo,
+        behavior: "smooth", // Rola suavemente
+      });
+    }
+  </script>
 </html>
