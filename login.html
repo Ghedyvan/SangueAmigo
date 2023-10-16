@@ -21,7 +21,9 @@
       <div class="contaainer">
         <div class="login-box">
           <h1>Entrar</h1>
-          <form action="./home.html">
+
+          <form action="./home.html"  id="loginForm">
+
             <div class="entradas">
               <input
                 type="text"
@@ -36,6 +38,7 @@
                 placeholder="Senha"
               />
             </div>
+
             <div class="conjunto">
               <div class="left">
                 <input type="checkbox" name="checkbox" id="checkbox" />
@@ -47,73 +50,60 @@
             </div>
             <button type="submit">Entrar</button>
           </form>
+
+          <script>
+            
+            const formEl = document.getElementById('loginForm')
+
+            formEl.addEventListener('submit', event => {
+              event.preventDefault();
+
+              const formData = new FormData(formEl);
+
+              formData.set('email', formData.get('login'));
+              formData.delete('login');
+
+              const data = Object.fromEntries(formData);
+
+              console.log(data);
+              console.log(JSON.stringify(data));
+              loginUser(data);
+            })
+
+            function loginUser(data) {
+      
+              fetch('http://localhost:8080/auth/login', {
+                  method: "POST",
+                  headers: {
+                      "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(data),
+              })
+                  .then((response) => response.json())
+                  .then((data) => {
+                      console.log("Resposta do servidor:", data);
+
+                      const authToken = data.token;
+                      console.log(authToken);
+
+                      localStorage.setItem("authToken", authToken);
+
+                      console.log("Login Sucessfull");
+                      window.location.href = "./home.html";
+                  })
+                  .catch((error) => {
+                      console.error("Erro na solicitação:", error);
+                      alert("Erro ao autenticar. Por favor, tente novamente.");
+                  });
+            }
+
+          </script>
+
           <a href="./cadastro.html">Criar conta</a>
+
         </div>
       </div>
     </main>
   </body>
 
-  <script>
-
-    function autenticarUsuario(email, senha) {
-      const url = "/auth/login";
-      const dados = {
-        email: email,
-        senha: senha,
-      };
-      const options = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(dados),
-      };
-
-      fetch(url, options)
-        .then((response) => response.json())
-        .then((dados) => {
-          console.log(dados);
-        })
-        .catch((error) => {
-          alert("Ocorreu um erro " + error);
-        });
-    }
-
-    function registrarUsuario(email, senha) {
-      const url = "/auth/register";
-      const dados = {
-        email: email,
-        senha: senha,
-      };
-      const options = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(dados),
-      };
-
-      fetch(url, options)
-        .then((response) => response.json())
-        .then((dados) => {
-          console.log(dados);
-        })
-        .catch((error) => {
-          alert("Ocorreu um erro " + error);
-        });
-    }
-
-    function getbloodCentersList() {
-      const url = "/bloodCenters/list";
-
-      fetch(url)
-        .then((response) => response.json())
-        .then((dados) => {
-          console.log(dados);
-        })
-        .catch((error) => {
-          alert("Ocorreu um erro: " + error);
-        });
-    }
-  </script>
 </html>
