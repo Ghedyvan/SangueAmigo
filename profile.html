@@ -80,7 +80,7 @@
               class="imgselected"
             />
           </button>
-          <p>Estatísticass</p>
+          <p>Estatísticas</p>
         </a>
         <a href="./profile.html">
           <button class="selected">
@@ -117,39 +117,17 @@
             </div>
           </div>
           <div class="top-right">
-            <div class="retangulo">
-              <div class="retangulo-dados">
-                <p>Usuário: Larissa Santana</p>
-              </div>
-              <div class="retangulo-dados">
-                <p>Sexo Biológico: Feminino</p>
-              </div>
-              <div class="retangulo-dados">
-                <p>Email: lds@ic.ufal.br</p>
-              </div>
-              <div class="retangulo-dados">
-                <p>Tipo Sanguíneo e Fator Rh: O+</p>
-              </div>
-              <div class="retangulo-dados">
-                <p>Data de nascimento: 27/01/2000</p>
-              </div>
-              <div class="retangulo-dados">
-                <p>Peso: 52 kg</p>
-              </div>
-            </div>
+            <div class="retangulo" id="accountTable"></div>
           </div>
         </div>
         <div class="bottom">
           <div class="conteudo">
-            <div class="bottom-left">
-              <p>Ultima doação: <span>Não cadastrada</span></p>
-              <p>Próxima doação: <span>Você já pode doar!</span></p>
-            </div>
+            <div class="bottom-left" id="donationDatesInfo"></div>
             <div class="bottom-right">
               <div class="circulo">
                 <div class="txt">
                   <p>Já doei:</p>
-                  <h1>0</h1>
+                  <h1 id="donationQuantity"></h1>
                   <span>Vezes</span>
                 </div>
               </div>
@@ -159,9 +137,12 @@
       </div>
     </main>
   </body>
+
   <script>
     function perfil() {
       window.location.href = "profile.html";
     }
   </script>
+
+    <script src="profile.js"></script>
 </html>
