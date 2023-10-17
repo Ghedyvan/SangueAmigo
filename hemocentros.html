@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,7 +21,9 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
+
     <header>
       <div class="user">
         <button onclick="perfil()">
@@ -42,6 +45,7 @@
         ></a>
       </div>
     </header>
+
     <nav>
       <div class="block"></div>
       <div class="icons">
@@ -79,7 +83,7 @@
               class="imgselected"
             />
           </button>
-          <p>Estatísticass</p>
+          <p>Estatísticas</p>
         </a>
         <a href="./profile.html">
           <button>
@@ -105,40 +109,26 @@
 
     <main>
       <div class="container">
-        <h2>Hemocentros próximos a você</h2>
-        <div class="box-01">
-          <div class="first-box">
-            <p>Hemocentro</p>
-            <p>Endereço</p>
-            <p>Distância</p>
+          <h2>Hemocentros próximos a você</h2>
+          <div class="box-01">
+              <div class="first-box">
+                  <p>Hemocentro</p>
+                  <p>Endereço</p>
+                  <p>Distância</p>
+              </div>
           </div>
-        </div>
-        <div class="content-box">
-          <div class="other-box">
-            <p>HEMOAL - Maceió</p>
-            <p>R. Jorge de Lima, 58
-                MACEIÓ / AL - CEP 57010300</p>
-            <p>4.3km</p>
-          </div>
-          <div class="other-box">
-            <p>AL - NÚCLEO DE HEMOTERAPIA DO HUPAA/UFAL
-            </p>
-            <p>Lourival Melo Mota Km14
-                MACEIÓ / AL - CEP 57072970</p>
-            <p>17.2km</p>
-          </div>
-          <div class="other-box">
-            <p>HEMOAL - Arapiraca</p>
-            <p>Rua Geraldo Barboza – Laboratório Municipal de Arapiraca</p>
-            <p>74.7km</p>
-          </div>
-        </div>
+          <div class="content-box" id="tabela"></div>
       </div>
+
     </main>
+
   </body>
+
   <script>
      function perfil() {
-      window.location.href = "profile.html";
-    }
+      window.location.href = "profile.html"}
   </script>
+
+  <script src="hemocentros.js"></script>
+
 </html>
