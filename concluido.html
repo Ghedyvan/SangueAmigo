@@ -23,10 +23,20 @@
           <img src="./img/concluido.svg" alt="" />
           <h1>Cadastro concluído</h1>
           <h2>Acesse seu usuário com:</h2>
-          <h2><strong>larrissinha@ic.ufal.br</strong></h2>
+          <h2><strong id="registered-user"></strong></h2>
           <a href="./login.html"><button>Entrar</button></a>
         </div>
       </div>
     </main>
   </body>
 </html>
+
+<script>
+  addEventListener('DOMContentLoaded', fillRegisteredUser);
+
+  function fillRegisteredUser() {
+    const user = JSON.parse(localStorage.getItem('userRegister'));
+    const registeredUserLabel = document.getElementById('registered-user');
+    registeredUserLabel.innerText = user.email;
+  }
+</script>

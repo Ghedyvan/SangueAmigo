@@ -31,31 +31,61 @@
         <div class="register-box">
           <h1>Cadastro</h1>
           <p>Preencha os dados abaixo para começar.</p>
-          <form action="./cadastroend.html">
+          <form>
             <div class="left">
-              <select name="sexo" id="sexo">
+              <select name="gender" id="gender">
                 <option value="" selected>Sexo biológico</option>
-                <option value="">Masculino</option>
-                <option value="">Feminino</option>
+                <option value="Male">Masculino</option>
+                <option value="Female">Feminino</option>
               </select>
-              <select name="gruposanguineo" id="gruposanguineo">
+              <select name="bloodType" id="bloodType">
                 <option value="" selected>Grupo sanguíneo</option>
-                <option value="a" class="preenchido">A</option>
-                <option value="b" class="preenchido">B</option>
-                <option value="c" class="preenchido">AB</option>
-                <option value="d" class="preenchido">O</option>
+                <option value="A" class="preenchido">A</option>
+                <option value="B" class="preenchido">B</option>
+                <option value="AB" class="preenchido">AB</option>
+                <option value="O" class="preenchido">O</option>
               </select>
-              <select name="fatorrh" id="fatorrh">
+              <select name="rhFactor" id="rhFactor">
                 <option value="" selected>Fator RH</option>
-                <option value="">Positivo</option>
-                <option value="">Negativo</option>
+                <option value="Positive">Positivo</option>
+                <option value="Negative">Negativo</option>
               </select>
-              <input type="number" name="peso" id="peso" placeholder="Peso (em kg)">
+              <input type="number" name="weight" id="weight" placeholder="peso (em kg)">
             </div>
-            <button type="submit">Continuar</button>
+            <button type="submit" id="submit">Continuar</button>
           </form>
         </div>
       </div>
     </main>
   </body>
+  <script>
+    function addListeners() {
+      document.getElementById('submit').addEventListener('click', (event) => {
+        event.preventDefault();
+        saveInfo();
+        window.location = 'cadastroend.html';
+      })
+    }
+    addEventListener('DOMContentLoaded', addListeners);
+
+    function saveInfo() {
+      try{
+        const gender = document.getElementById('gender').value;
+        const bloodType = document.getElementById('bloodType').value;
+        const rhFactor = document.getElementById('rhFactor').value;
+        const weight = document.getElementById('weight').value;
+        
+        const userRegister = JSON.parse(localStorage.getItem('userRegister'));
+        userRegister.gender = gender;
+        userRegister.bloodType = bloodType;
+        userRegister.rhFactor = rhFactor;
+        userRegister.weight = weight;
+
+
+        localStorage.setItem('userRegister', JSON.stringify(userRegister));
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  </script>
 </html>

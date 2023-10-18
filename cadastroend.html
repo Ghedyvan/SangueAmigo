@@ -34,7 +34,7 @@
         <div class="register-box">
           <h1>Cadastro</h1>
           <p>Preencha os dados abaixo para começar.</p>
-          <form action="./concluido.html">
+          <form>
             <div class="left">
               <input
                 type="number"
@@ -44,39 +44,69 @@
               />
               <input
                 type="text"
-                id="estado"
-                name="estado"
+                id="state"
+                name="state"
 
                 placeholder="Estado"
               />
               <input
                 type="number"
-                id="numero"
-                name="numero"
+                id="number"
+                name="number"
                 
                 placeholder="Número"
               />
               <input
                 type="text"
-                id="cidade"
-                name="cidade"
+                id="city"
+                name="city"
                
                 placeholder="Cidade"
               />
               <input
                 type="text"
-                id="rua"
-                name="rua"
+                id="street"
+                name="street"
                 
                 placeholder="Rua"
               />
             </div>
-            <button type="submit">Continuar</button>
+            <button type="submit" id="submit">Continuar</button>
           </form>
         </div>
       </div>
     </main>
     <script>
+      function addListeners() {
+        document.getElementById('submit').addEventListener('click', (event) => {
+          event.preventDefault();
+          saveInfo();
+        })
+      }
+      addEventListener('DOMContentLoaded', addListeners);
+
+      async function saveInfo() {
+        try{
+          const cep = document.getElementById('cep').value;
+          const state = document.getElementById('state').value;
+          const number = document.getElementById('number').value;
+          const street = document.getElementById('street').value;
+          const city = document.getElementById('city').value;
+          const userRegister = JSON.parse(localStorage.getItem('userRegister'));
+
+          userRegister.cep = cep;
+          userRegister.state = state;
+          userRegister.number = number;
+          userRegister.street = street;
+          userRegister.city = city;
+          
+          const dados = montarRequisicao(userRegister);
+          await userSignUp(dados);
+          window.location = 'concluido.html';
+        } catch (err) {
+          console.log(err);
+        }
+      }
       document.getElementById("cep").addEventListener("blur", function () {
         let cep = this.value.replace(/\D/g, "");
         if (cep.length === 8) {
@@ -85,13 +115,11 @@
             .then((response) => response.json())
             .then((data) => {
               if (!data.erro) {
-                document.getElementById("rua").value = data.logradouro;
-                document.getElementById("cidade").value = data.localidade;
-                document.getElementById("estado").value = data.uf;
+                document.getElementById("street").value = data.logradouro;
+                document.getElementById("city").value = data.localidade;
+                document.getElementById("state").value = data.uf;
               }
-              // else {
-              //   alert("CEP não encontrado. Verifique o CEP digitado.");
-              // }
+             
             })
             .catch((error) => {
               alert(
@@ -100,6 +128,56 @@
             });
         }
       });
+      
+      async function userSignUp(data) {
+        try {
+          console.log(data);
+          const response = await fetch('http://localhost:8080/auth/register', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          });
+          console.log(response);    
+        } catch(err) {
+          alert("Erro ao registrar. Por favor, tente novamente.");
+          console.log(err);
+        }
+      }
+      function montarRequisicao(userRegister) {
+        try {
+          let names = userRegister.name.split(' ');
+          let firstname = names[0];
+          let lastname = names[names.length-1]
+          return {
+            user: {
+              firstname,
+              lastname,
+              email: userRegister.email,
+              password: userRegister.password,
+              role: "ADMIN"
+          },
+          biologicalInfo: {
+              birthday: userRegister.birthday,
+              biologicalSex: userRegister.gender,
+              bloodType: userRegister.bloodType,
+              rhFactor: userRegister.rhFactor === 'Positive',
+              weight: userRegister.weight
+          },
+          addressInfo: {
+              cep: userRegister.cep,
+              street: userRegister.street,
+              number: userRegister.number,
+              city: userRegister.city,
+              state: userRegister.state
+            }
+          }
+        } catch(err) {
+          console.log(err);
+        }
+       
+      }
     </script>
   </body>
 </html>
