@@ -1,0 +1,20 @@
+@import "reset";
+@import "colors";
+@import "grid";
+@import "header";
+@import "navbar";
+
+main {
+  .container {
+    align-content: center;
+    flex-wrap: wrap;
+    h2{
+      color: var(--texts-base, #6A6180);
+      font-family: Poppins;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 26px; /* 100% */
+    }
+  }
+}
