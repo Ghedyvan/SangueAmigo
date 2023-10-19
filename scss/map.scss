@@ -8,13 +8,28 @@ main {
   .container {
     align-content: center;
     flex-wrap: wrap;
-    h2{
-      color: var(--texts-base, #6A6180);
-      font-family: Poppins;
-      font-size: 26px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 26px; /* 100% */
+
+    h2 {
+        color: var(--texts-base, #6A6180);
+        align-self: center;
+        margin-top: 2rem;
+        margin-bottom:2rem ;
+        position: relative;
+        font-family: "Poppins", sans-serif;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0.02rem;
+        text-align: center;
+        color: $letterhome;
+        text-align: center;
+        width: 100%;
     }
-  }
+
+    #map {
+        width: 1200px;
+        height: 400px;
+        margin: auto; // Adiciona margens automáticas para centralizar
+    }
+}
 }
