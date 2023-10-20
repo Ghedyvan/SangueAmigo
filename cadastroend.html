@@ -99,10 +99,15 @@
           userRegister.number = number;
           userRegister.street = street;
           userRegister.city = city;
+         
+          if(cep && state && number && street && city) { 
+            const dados = montarRequisicao(userRegister);
+            await userSignUp(dados);
+
+            window.location = 'concluido.html';
+          }
+         
           
-          const dados = montarRequisicao(userRegister);
-          await userSignUp(dados);
-          window.location = 'concluido.html';
         } catch (err) {
           console.log(err);
         }
