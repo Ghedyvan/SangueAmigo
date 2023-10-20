@@ -27,10 +27,7 @@
     <header>
       <div class="user">
         <button onclick="perfil()">
-          <div class="text">
-            <p>Larissa Santana</p>
-            <h2>O+</h2>
-          </div>
+          <div class="text" id="userHeader"></div>
           <div class="arrow">
             <img src="./img/bloodicon.svg" alt="" />
             <img src="./img/icon/more.svg" alt="" />
@@ -45,7 +42,6 @@
         ></a>
       </div>
     </header>
-
     <nav>
       <div class="block"></div>
       <div class="icons">
@@ -97,16 +93,14 @@
             <img src="./img/novadoacao.svg" alt="" class="imgnotselected" />
             <img src="./img/novadoacaoSelected.svg" alt="" class="imgselected" />
           </button>
-          <p>Cadastrar<br>doação</p>
+          <p>Nova<br>doação</p>
         </a>
-        
       </div>
       <div class="img">
         <img src="./img/gotasidebar.svg" alt="" class="imgnotselected" />
         <div class="title">Sangue Amigo</div>
       </div>
     </nav>
-
     <main>
       <div class="container">
           <h2>Hemocentros próximos a você</h2>
@@ -119,16 +113,12 @@
           </div>
           <div class="content-box" id="tabela"></div>
       </div>
-
     </main>
-
   </body>
-
   <script>
      function perfil() {
       window.location.href = "profile.html"}
   </script>
-
   <script src="hemocentros.js"></script>
-
+  <script src="./requestHeader.js"></script>
 </html>

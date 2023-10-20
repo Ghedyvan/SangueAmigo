@@ -25,10 +25,7 @@
     <header>
       <div class="user">
         <button onclick="perfil()">
-          <div class="text">
-            <p>Larissa Santana</p>
-            <h2>O+</h2>
-          </div>
+          <div class="text" id="userHeader"></div>
           <div class="arrow">
             <img src="./img/bloodicon.svg" alt="" />
             <img src="./img/icon/more.svg" alt="" />
@@ -80,7 +77,7 @@
               class="imgselected"
             />
           </button>
-          <p>Estatísticass</p>
+          <p>Estatísticas</p>
         </a>
         <a href="./profile.html">
           <button>
@@ -98,7 +95,7 @@
               class="imgselected"
             />
           </button>
-          <p>Cadastrar<br />doação</p>
+          <p>Nova<br />doação</p>
         </a>
       </div>
       <div class="img">
@@ -106,26 +103,25 @@
         <div class="title">Sangue Amigo</div>
       </div>
     </nav>
-
     <main>
       <div class="container">
         <h2 class="title">Cadastrar nova doação</h2>
-        <div class="entradas">
-          <div class="left">
-            <div class="entrada">
-              <select name="campo1" id="">
-                <option value="" selected>Local de doação</option>
-                <option value="Hemoal">Hemoal</option>
-                <option value="SantaCasa">Santa casa de Maceió</option>
+                  <div class="entradas">
+            <div class="left">
+              <div class="entrada">
+                <select name="campo1" id="">
+                  <option value="" selected>Local de doação</option>
+                  <option value="Hemoal">Hemoal</option>
+                  <option value="SantaCasa">Santa casa de Maceió</option>
                 <option value="HemoPac">Hemopac</option>
                 <option value="Outro">Outro</option>
-              </select>
-            </div>
+                </select>
+              </div>
+              <div class="entrada">
+                <input type="date" name="data" id="" />
+                          </div>
             <div class="entrada">
-              <input type="date" name="data" id="" />
-            </div>
-            <div class="entrada">
-              <input type="time" />
+                  <input type="time" />
             </div>
           </div>
           <div class="right" onclick="abrirInput()">
@@ -133,8 +129,8 @@
           </div>
         </div>
         <input type="file" id="file-input" onchange="exibirNomeArquivo()" />
-        <button>Cadastrar</button>
-      </div>
+          <button>Cadastrar</button>
+              </div>
     </main>
   </body>
   <script>

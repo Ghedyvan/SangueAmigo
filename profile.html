@@ -25,10 +25,7 @@
     <header>
       <div class="user">
         <button onclick="perfil()">
-          <div class="text">
-            <p>Larissa Santana</p>
-            <h2>O+</h2>
-          </div>
+          <div class="text" id="userHeader"></div>
           <div class="arrow">
             <img src="./img/bloodicon.svg" alt="" />
             <img src="./img/icon/more.svg" alt="" />
@@ -98,7 +95,7 @@
               class="imgselected"
             />
           </button>
-          <p>Cadastrar<br />doação</p>
+          <p>Nova<br/>doação</p>
         </a>
       </div>
       <div class="img">
@@ -106,7 +103,6 @@
         <div class="title">Sangue Amigo</div>
       </div>
     </nav>
-
     <main>
       <div class="container">
         <h2 class="title">Perfil</h2>
@@ -137,12 +133,11 @@
       </div>
     </main>
   </body>
-
   <script>
     function perfil() {
       window.location.href = "profile.html";
     }
   </script>
-
-    <script src="profile.js"></script>
+  <script src="profile.js"></script>
+  <script src="./requestHeader.js"></script>
 </html>
