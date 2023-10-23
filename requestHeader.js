@@ -17,18 +17,15 @@ function get(url, callback) {
     if (token) {
         request.setRequestHeader("Authorization", "Bearer " + token);
     }
-
     request.send();
 }
 
 function cretedUserHeader(userDetails) {
-
     console.log(userDetails)
     return `<p>${userDetails.name}</p>                     
             <h2> ${userDetails.blood_type}</h2>
             `
 }
-
 
 function getAccountList() {
     get("http://localhost:8080/account/list", function (error, data) {
@@ -36,12 +33,9 @@ function getAccountList() {
             console.error(error);
             return;
         }
-
-        console.log('teste');
         let userDetails = JSON.parse(data);
         const userHeader = document.getElementById("userHeader");
         userHeader.innerHTML = cretedUserHeader(userDetails);
-
     });
 }
 
