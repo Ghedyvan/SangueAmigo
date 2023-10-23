@@ -63,7 +63,6 @@
       document.getElementById('submit').addEventListener('click', (event) => {
         event.preventDefault();
         saveInfo();
-        window.location = 'cadastroend.html';
       })
     }
     addEventListener('DOMContentLoaded', addListeners);
@@ -81,8 +80,10 @@
         userRegister.rhFactor = rhFactor;
         userRegister.weight = weight;
 
-
-        localStorage.setItem('userRegister', JSON.stringify(userRegister));
+        if(gender && bloodType && rhFactor && weight) { 
+          localStorage.setItem('userRegister', JSON.stringify(userRegister));
+          window.location = 'cadastroend.html';
+        }
       } catch (err) {
         console.log(err);
       }

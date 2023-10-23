@@ -33,15 +33,10 @@
           <p>Preencha os dados abaixo para começar.</p>
           <form>
             <div class="left">
-              <input type="text" name="name" id="name" placeholder="Nome completo" />
-              <input type="date" name="birthday" id="birthday">
-              <input type="email" name="email" id="email" placeholder="Email" />
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Senha"
-              />
+              <input type="text" name="name" id="name" placeholder="Nome completo" required>
+              <input type="date" name="birthday" id="birthday" required>
+              <input type="email" name="email" id="email" placeholder="Email" required>
+              <input type="password" name="password" id="password" placeholder="Senha" required>
             </div>
             <button type="submit" id="submit">Continuar</button>
           </form>
@@ -55,11 +50,8 @@
         event.preventDefault();
      
         saveInfo();
-        window.location = 'cadastrocopia.html';
       })
     }
-
-    () => 2
     
     addEventListener('DOMContentLoaded', () => {
       addListeners();
@@ -71,16 +63,19 @@
         const birthday = document.getElementById('birthday').value;
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
+
         
-        localStorage.setItem('userRegister', JSON.stringify({
+          localStorage.setItem('userRegister', JSON.stringify({
           email, password, birthday, name
-        }));
+          }));
+          
+          if(name && birthday && email && password ) { 
+            window.location = 'cadastroSecond.html';}
+        
       } catch (error) {
         console.log(error);
       }
     }
-
-   
 
   </script>
 </html>
