@@ -105,6 +105,8 @@ main {
         width: 100%;
         max-width: 115rem;
         display: flex;
+        justify-content: space-between;
+        padding: 5rem;
       }
       .bottom-left {
         p {
@@ -114,6 +116,32 @@ main {
           font-weight: 400;
           line-height: normal;
         }
+      }
+      .bottom-left {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+      }
+      .checkbox-custom {
+        align-self: flex-end;
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-top: 10%;
+      }
+
+      #checkbox {
+        scale: 1.5;
+        margin: 1rem;
+      }
+      .emailText {
+          color: var(--texts-base, #6a6180);
+          font-family: Poppins;
+          font-size: 2rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
       }
       .bottom-right {
         width: 18rem;

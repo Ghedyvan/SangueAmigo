@@ -20,7 +20,6 @@
     <link rel="icon" href="./img/title.png" />
     <title>Sangue Amigo</title>
   </head>
-
   <body>
     <header>
       <div class="user">
@@ -118,7 +117,16 @@
         </div>
         <div class="bottom">
           <div class="conteudo">
-            <div class="bottom-left" id="donationDatesInfo"></div>
+            <div class="bottom-left">
+              <p id="lastDonationDates">Última doação: </p>
+              <p id="nextDonationDates">Próxima doação: </p>
+              <div class="checkbox-custom">
+                <input type="checkbox" onclick="changeCheckboxValue(this)" id="checkbox">
+                <label class="emailText" for="customCheckbox">
+                  Gostaria de receber lembretes via email quando puder doar novamente
+                </label>
+              </div> 
+            </div>          
             <div class="bottom-right">
               <div class="circulo">
                 <div class="txt">
@@ -129,7 +137,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     </main>
   </body>

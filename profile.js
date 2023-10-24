@@ -44,7 +44,6 @@ function cretedAccountTable(userDetails) {
             </div>`
 }
 
-
 function getAccountList() {
     get("http://localhost:8080/account/list", function (error, data) {
         if (error) {
@@ -56,7 +55,6 @@ function getAccountList() {
         let userDetails = JSON.parse(data);
         const table = document.getElementById("accountTable");
         table.innerHTML += cretedAccountTable(userDetails);
-
     });
 }
 
@@ -106,15 +104,15 @@ function obterNomeMes(numeroMes) {
 }
 
 function createLastDonationDates(lastDonationDate) {
-    return `<p>Ultima doação: <span>${formatDate(lastDonationDate)}.</span></p>`
+    return `${formatDate(lastDonationDate)}.`
 }
 
 function createNextDonationDates(nextDonationDate) {
-    return `<p>Próxima doação: <span>${formatDate(nextDonationDate)}.</span></p>`
+    return `${formatDate(nextDonationDate)}.`
 }
 
-function getDonationDates() {
-    const table = document.getElementById("donationDatesInfo");
+function getLastDonationDates() {
+    const table = document.getElementById("lastDonationDates");
 
     get("http://localhost:8080/account/:userId/lastDonationDate", function (error, data) {
         if (error) {
@@ -126,6 +124,12 @@ function getDonationDates() {
         let lastDonationDate = JSON.parse(data);
         table.innerHTML += createLastDonationDates(lastDonationDate);
     });
+}
+
+getLastDonationDates();
+
+function getNextDonationDates() {
+    const table = document.getElementById("nextDonationDates");
 
     get("http://localhost:8080/account/:userId/nextDonationDate", function (error, data) {
         if (error) {
@@ -139,4 +143,48 @@ function getDonationDates() {
     });
 }
 
-getDonationDates();
+getNextDonationDates();
+
+function post(url, callback) {
+    let request = new XMLHttpRequest();
+    let token = localStorage.getItem("authToken");
+
+    request.onreadystatechange = function () {
+        if (request.readyState === XMLHttpRequest.DONE) {
+            if (request.status === 201) {
+                callback(null, request.responseText);
+            } else {
+                callback("Erro na solicitação: " + request.statusText, null);
+            }
+        }
+    };
+
+    request.open("POST", url, true);
+
+    if (token) {
+        request.setRequestHeader("Authorization", "Bearer " + token);
+    }
+
+    request.send();
+}
+
+function changeCheckboxValue(value) {
+    console.log("OK")
+
+    var isChecked = value.checked;
+
+    if (isChecked) {
+        simulatePutRequest();
+    }
+}
+
+function simulatePutRequest() {
+
+    post("http://localhost:8080/email/send", function (error) {
+        if (error) {
+            console.error(error);
+            return;
+        }
+        console.log('POST request enviado');
+    });
+}
