@@ -11,18 +11,18 @@ main {
     flex-direction: column;
     bottom: unset;
     .title {
-      margin-top: 2.5rem;
       margin-bottom: 3rem;
       position: relative;
-      font-family: "Poppins", sans-serif;
-      font-size: 3.5rem;
-      font-weight: 400;
-      line-height: 2.4rem;
       letter-spacing: 0.02rem;
-      text-align: center;
-      color: $letterhome;
-      text-align: center;
       width: 100%;
+      color: var(--texts-base, #6a6180);
+      font-family: Poppins;
+      font-size: 2.6rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 2.6rem; /* 100% */
+      margin-top: 3.2rem;
+      text-align: center;
     }
     .coisas {
       width: 100%;
@@ -42,13 +42,14 @@ main {
           background-color: $white;
           border-radius: 0.8rem;
           .elipse {
-            width: 7rem;
+            width: 12rem;
             height: 7rem;
             border-radius: 50%;
             background-color: rgba(51, 214, 159, 0.07);
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-left: 3rem;
           }
           h3 {
             color: $letterhome;
@@ -58,6 +59,10 @@ main {
             font-weight: 400;
             line-height: 2rem; /* 125% */
             letter-spacing: 0.016rem;
+            align-items: center;
+            text-align: center;
+            margin-left: 3rem ;
+            margin-right: 3rem ;
           }
           h4 {
             color: #a6acbe;
@@ -67,6 +72,8 @@ main {
             font-weight: 400;
             line-height: normal;
             letter-spacing: 0.014rem;
+            align-items: center;
+            text-align: center;
           }
         }
       }
@@ -122,6 +129,17 @@ main {
                 letter-spacing: 0.014rem;
               }
             }
+          }
+          p {
+            color: #a6acbe;
+            font-family: Poppins;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.014rem;
+            text-align: end;
+            margin-top: 15%;
           }
         }
       }
