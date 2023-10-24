@@ -186,13 +186,8 @@ header {
       margin-top: 5.3rem;
       display: flex;
       justify-content: space-between;
-      .card-01 {
-        @include card-style($rosa-claro, $hero-bg, $grey-02, $white);
-      }
-      .card-02,
-      .card-03,
-      .card-04 {
-        @include card-style($white, $hero-bg, $grey-02, $rosa-claro);
+      .card {
+        @include card-style($rosa-claro, $hero-bg, $grey-02, $white); height: 36rem;
       }
       @media screen and (max-width: 1130px) {
         display: flex;
