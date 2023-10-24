@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" href="./img/title.png" />
+    <script src = "./modal.js" defer></script>
     <title>Sangue Amigo</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&family=Inter:wght@600&family=Overpass:ital,wght@1,100&family=Poppins:wght@400;500;700&family=Prosto+One&display=swap"
@@ -114,6 +115,107 @@
           <div class="content-box" id="tabela"></div>
       </div>
     </main>
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <div class="modalHeader">
+            <button id = "closeModal">X</button>
+        </div>
+        <div class="modalBody">
+            <div class="bloodCenterInfoContainer">
+              <div class="bloodCenterInfo">
+                <p id="bloodCenterInfoAddress">Rua fulano de tal</p>
+                <p id="blooCenterInfoOperatingTime">De segunda a sexta</p>
+                <p id="blooCenterInfoPhone">(82) 1231-3123</p>
+                <a id="bloodCenterInfoWebsite" href="https://www.google.com">LINK para o website</a>
+                <p>
+                  <span>Última atualização em: </span>
+                  <span id="bloodCenterLastUpdatedAt">23/10/2023</span>
+                </p>
+              </div>
+            </div>
+            <div class="bloodCenterStock">
+                <h2 class="bloodCenterStockTitle">ESTOQUE DE SANGUE</h2>
+                <div class="bloodCenterStockTable">
+                  <div class="bloodCenterStockTableColumn">
+                    <div class="bloodStock" id="bloodStock-0">
+                      <span class="bloodStockLabel">Estável</span>
+                      <div class="bloodStockValue">
+                        <div class="bloodStockBackground"></div>
+                        <div class="bloodStockPercentage" style="width: 50%">
+                          <span class="bloodStockPercentageLabel">A+</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bloodStock" id="bloodStock-1">
+                      <span class="bloodStockLabel">Estável</span>
+                      <div class="bloodStockValue">
+                        <div class="bloodStockBackground"></div>
+                        <div class="bloodStockPercentage" style="width: 50%">
+                          <span class="bloodStockPercentageLabel">B+</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bloodStock" id="bloodStock-2">
+                      <span class="bloodStockLabel">Estável</span>
+                      <div class="bloodStockValue">
+                        <div class="bloodStockBackground"></div>
+                        <div class="bloodStockPercentage" style="width: 50%">
+                          <span class="bloodStockPercentageLabel">AB+</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bloodStock" id="bloodStock-3">
+                      <span class="bloodStockLabel">Estável</span>
+                      <div class="bloodStockValue">
+                        <div class="bloodStockBackground"></div>
+                        <div class="bloodStockPercentage" style="width: 50%">
+                          <span class="bloodStockPercentageLabel">O+</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bloodCenterStockTableColumn">
+                    <div class="bloodStock" id="bloodStock-4">
+                      <span class="bloodStockLabel">Estável</span>
+                      <div class="bloodStockValue">
+                        <div class="bloodStockBackground"></div>
+                        <div class="bloodStockPercentage" style="width: 50%">
+                          <span class="bloodStockPercentageLabel">A-</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bloodStock" id="bloodStock-5">
+                      <span class="bloodStockLabel">Estável</span>
+                      <div class="bloodStockValue">
+                        <div class="bloodStockBackground"></div>
+                        <div class="bloodStockPercentage" style="width: 50%">
+                          <span class="bloodStockPercentageLabel">B-</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bloodStock" id="bloodStock-6">
+                      <span class="bloodStockLabel">Estável</span>
+                      <div class="bloodStockValue">
+                        <div class="bloodStockBackground"></div>
+                        <div class="bloodStockPercentage" style="width: 50%">
+                          <span class="bloodStockPercentageLabel">AB-</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bloodStock" id="bloodStock-7">
+                      <span class="bloodStockLabel">Estável</span>
+                      <div class="bloodStockValue">
+                        <div class="bloodStockBackground"></div>
+                        <div class="bloodStockPercentage" style="width: 50%">
+                          <span class="bloodStockPercentageLabel">O-</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+                </div>                                
+            </div>
+        </div>
+    </div>
   </body>
   <script>
      function perfil() {

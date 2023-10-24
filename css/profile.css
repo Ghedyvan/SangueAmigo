@@ -1,1 +1,381 @@
-*{margin:0;padding:0;list-style:none;text-decoration:none;outline:none;border:none;box-sizing:border-box}img{display:block}html{background-color:#F1F3F5;font-size:62.5%}button,a{background-color:transparent;cursor:pointer}.container{position:absolute;left:18.5rem;top:17.8rem;right:6.8rem;background-color:rgba(230,230,242,0.3);bottom:6.9rem;border-radius:1rem}header{background-color:white;width:100%;height:12.7rem;display:flex;justify-content:flex-end;align-items:center}header .user{display:flex;align-items:center}header .user button{display:flex;align-items:center}header .user button:last-child{margin:5rem 5rem}header .user button .text{margin-right:1.7rem}header .user button .text p,header .user button .text h2{text-align:right;letter-spacing:0.02rem;font-family:"Poppins", sans-serif}header .user button .text p{color:#000;font-size:1.4rem;font-weight:400}header .user button .text h2{color:#A6ACBE;font-size:2rem;font-weight:400}header .user button .arrow{display:flex;margin-right:2rem}nav{width:10rem;border-radius:6rem;background-color:rgba(235,87,87,0.73);position:absolute;height:94%;margin-left:2.4rem;top:2rem;z-index:1;transition:.3s all}nav a{margin-bottom:1.3rem}nav p{display:none}nav .block{width:10rem;height:10.7rem;border-top-left-radius:6rem;border-top-right-radius:6rem;background-color:#eb5757;transition:.3s all}nav .icons{display:inline-flex;padding-left:2.2rem;flex-direction:column;align-items:center;justify-content:center;margin-top:3.3rem;justify-content:space-around}nav .icons button{width:5.3rem;height:5.4rem;display:flex;align-items:center;justify-content:center}nav .icons button:not(.selected):hover{background-color:rgba(0,0,0,0.07);border-radius:50%;box-shadow:0px 4px 10px 0px rgba(0,0,0,0.05)}nav .icons button:not(.selected) .imgselected{display:none}nav .icons .selected{background-color:white;border-radius:50%;box-shadow:0px 4px 10px 0px rgba(0,0,0,0.25)}nav .icons .selected .imgnotselected{display:none}nav .icons .selected .imgselected{display:flex}nav .img{align-items:center;justify-content:center;display:flex;position:absolute;bottom:3rem;left:1.7rem}nav .title{display:none;color:#fff;text-align:center;font-family:Archivo;font-size:2.4rem;font-style:normal;font-weight:700;line-height:3rem;max-width:15rem}nav:hover{width:24em}nav:hover .icons{align-items:flex-start;padding-left:2.2rem}nav:hover .block{width:24rem}nav:hover a{display:flex;justify-content:center;align-items:center}nav:hover a p{display:unset;margin-left:1rem;color:#fff;font-family:"Poppins", sans-serif;font-size:2rem;font-weight:400;line-height:2.8rem;letter-spacing:0.02rem;padding-right:2rem}nav:hover a:hover{background-color:rgba(0,0,0,0.07);border-radius:1rem;box-shadow:0px 4px 10px 0px rgba(0,0,0,0.05)}nav:hover .title{display:unset}main .container{bottom:unset;display:flex;flex-wrap:wrap}main .container .title{position:relative;text-align:center;width:100%;color:var(--texts-base, #6a6180);font-family:Poppins;font-size:2.6rem;font-style:normal;line-height:2.6rem;font-weight:500;letter-spacing:0.02rem;margin-top:3.2rem;margin-bottom:3.9rem;text-align:center}main .container h2{color:var(--texts-base, #6a6180);font-family:Poppins;font-size:2.6rem;font-style:normal;font-weight:400;line-height:2.6rem;margin-top:3.2rem;text-align:center}main .container .top{width:100%;display:flex;margin-left:6rem;margin-right:10rem;justify-content:center}main .container .top .top-left{width:22rem;height:22rem}main .container .top .top-left .retangulo{width:100%;height:100%;background-color:#fff;border-radius:1rem;border:1px solid #000;display:flex;justify-content:center;align-items:center}main .container .top .top-left .retangulo img{width:18rem}main .container .top .top-right{width:100%;max-width:80rem;height:22rem}main .container .top .top-right .retangulo{width:100%;max-width:80rem;display:flex;flex-wrap:wrap;border-radius:1rem;border:1px solid #25213b;background:rgba(230,230,242,0.3);margin-left:5rem;justify-content:space-around}main .container .top .top-right .retangulo .retangulo-dados{width:40%;max-width:35rem;height:5rem;border-radius:1rem;background:#e6e6f2;margin:1rem;text-align:left;display:flex;align-items:center;padding-left:2rem}main .container .top p{color:#444B59;font-family:"Poppins", sans-serif;font-size:1.6rem;font-weight:400;line-height:normal}main .container .bottom{width:100%;display:flex;justify-content:center;margin-top:5rem;margin-right:5rem;margin-left:5rem}main .container .bottom .conteudo{width:100%;max-width:115rem;display:flex}main .container .bottom .bottom-left p{color:#444B59;font-family:"Poppins", sans-serif;font-size:2rem;font-weight:400;line-height:normal}main .container .bottom .bottom-right{width:18rem;height:18rem}main .container .bottom .bottom-right .circulo{width:100%;height:100%;border-radius:50%;background-color:#eb5757;display:flex;justify-content:center;align-items:center}main .container .bottom .bottom-right .circulo .txt{text-align:center;color:#fff;font-family:Poppins;font-size:1.6rem;font-style:normal;font-weight:400;line-height:normal}main .container .bottom .bottom-right .circulo h1{font-size:4.8rem}
+/* Zerar margens, preenchimentos e estilos padrão para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos padrão para imagens */
+  img {
+    display: block;
+  }
+  
+  /* Configuração global da fonte */
+  html {
+    background-color: #F1F3F5;
+    font-size: 62.5%;
+  }
+  
+  /* Estilos para botões e links */
+  button,
+  a {
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  /* Estilos para o container principal */
+  .container {
+    position: absolute;
+    left: 18.5rem;
+    top: 17.8rem;
+    right: 6.8rem;
+    background-color: rgba(230, 230, 242, 0.3);
+    bottom: 6.9rem;
+    border-radius: 1rem;
+  }
+  
+  /* Estilos para o cabeçalho (header) */
+  header {
+    background-color: white;
+    width: 100%;
+    height: 12.7rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  header .user {
+    display: flex;
+    align-items: center;
+  }
+  
+  header .user button {
+    display: flex;
+    align-items: center;
+  }
+  
+  header .user button:last-child {
+    margin: 5rem 5rem;
+  }
+  
+  header .user button .text {
+    margin-right: 1.7rem;
+  }
+  
+  header .user button .text p,
+  header .user button .text h2 {
+    text-align: right;
+    letter-spacing: 0.02rem;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  header .user button .text p {
+    color: #000;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  
+  header .user button .text h2 {
+    color: #A6ACBE;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  
+  header .user button .arrow {
+    display: flex;
+    margin-right: 2rem;
+  }
+  
+  /* Estilos para a navegação (nav) */
+  nav {
+    width: 10rem;
+    border-radius: 6rem;
+    background-color: rgba(235, 87, 87, 0.73);
+    position: absolute;
+    height: 94%;
+    margin-left: 2.4rem;
+    top: 2rem;
+    z-index: 1;
+    transition: 0.3s all;
+  }
+  
+  nav a {
+    margin-bottom: 1.3rem;
+  }
+  
+  nav p {
+    display: none;
+  }
+  
+  nav .block {
+    width: 10rem;
+    height: 10.7rem;
+    border-top-left-radius: 6rem;
+    border-top-right-radius: 6rem;
+    background-color: #eb5757;
+    transition: 0.3s all;
+  }
+  
+  nav .icons {
+    display: inline-flex;
+    padding-left: 2.2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.3rem;
+    justify-content: space-around;
+  }
+  
+  nav .icons button {
+    width: 5.3rem;
+    height: 5.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  nav .icons button:not(.selected):hover {
+    background-color: rgba(0, 0, 0, 0.07);
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
+  }
+  
+  nav .icons button:not(.selected) .imgselected {
+    display: none;
+  }
+  
+  nav .icons .selected {
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+  nav .icons .selected .imgnotselected {
+    display: none;
+  }
+  
+  nav .icons .selected .imgselected {
+    display: flex;
+  }
+  
+  nav .img {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    bottom: 3rem;
+    left: 1.7rem;
+  }
+  
+  nav .title {
+    display: none;
+    color: #fff;
+    text-align: center;
+    font-family: Archivo;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3rem;
+    max-width: 15rem;
+  }
+  
+  /* Mostrar a navegação expandida no hover */
+  nav:hover {
+    width: 24rem;
+  }
+  
+  nav:hover .icons {
+    align-items: flex-start;
+    padding-left: 2.2rem;
+  }
+  
+  nav:hover .block {
+    width: 24rem;
+  }
+  
+  nav:hover a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav:hover a p {
+    display: unset;
+    margin-left: 1rem;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+    letter-spacing: 0.02rem;
+    padding-right: 2rem;
+  }
+  
+  nav:hover a:hover {
+    background-color: rgba(0, 0, 0, 0.07);
+    border-radius: 1rem;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
+  }
+  
+  nav:hover .title {
+    display: unset;
+  }
+  
+  /* Estilos para a seção principal (main) */
+  main .container {
+    bottom: unset;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  main .container .title {
+    margin-top: 2rem;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    letter-spacing: 0.02rem;
+    text-align: center;
+    color: #585364;
+    text-align: center;
+    width: 100%;
+  }
+  
+  main .container h2 {
+    color: var(--texts-base, #6a6180);
+    font-family: Poppins;
+    font-size: 2.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.6rem;
+    margin-top: 3.2rem;
+    text-align: center;
+  }
+  
+  main .container .top {
+    margin-top: 6rem;
+    width: 100%;
+    display: flex;
+    margin-left: 6rem;
+    margin-right: 10rem;
+    justify-content: center;
+  }
+  
+  main .container .top .top-left {
+    width: 22rem;
+    height: 22rem;
+  }
+  
+  main .container .top .top-left .retangulo {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  main .container .top .top-left .retangulo img {
+    width: 18rem;
+  }
+  
+  main .container .top .top-right {
+    width: 100%;
+    max-width: 80rem;
+    height: 22rem;
+  }
+  
+  main .container .top .top-right .retangulo {
+    width: 100%;
+    max-width: 80rem;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+    border: 1px solid #25213b;
+    background: rgba(230, 230, 242, 0.3);
+    margin-left: 5rem;
+    justify-content: space-around;
+  }
+  
+  main .container .top .top-right .retangulo .retangulo-dados {
+    width: 40%;
+    max-width: 35rem;
+    height: 5rem;
+    border-radius: 1rem;
+    background: #e6e6f2;
+    margin: 1rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+  }
+  
+  main .container .top p {
+    color: #444B59;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  main .container .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5rem;
+    margin-left: 5rem;
+  }
+  
+  main .container .bottom .conteudo {
+    width: 100%;
+    max-width: 115rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  main .container .bottom .bottom-left p {
+    color: #444B59;
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  main .container .bottom .bottom-right {
+    width: 18rem;
+    height: 18rem;
+  }
+  
+  main .container .bottom .bottom-right .circulo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #eb5757;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  main .container .bottom .bottom-right .circulo .txt {
+    text-align: center;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  main .container .bottom .bottom-right .circulo h1 {
+    font-size: 4.8rem;
+  }
+  
