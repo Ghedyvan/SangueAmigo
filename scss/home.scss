@@ -34,16 +34,17 @@ main {
         text-align: center;
       }
       h1 {
-        font-family: Archivo;
+        font-family: Poppins;
         font-size: 5.4rem;
         font-weight: 700;
-        line-height: 4.2rem; /* 77.778% */
+        line-height: 5.2rem; /* 77.778% */
+        padding-bottom: 2.6rem;
       }
       h2 {
-        padding-top: 4.6rem;
-        font-family: Prosto One;
+        padding-top: 2.6rem;
+        font-family: Poppins;
         font-size: 3.2rem;
-        font-weight: 400;
+        font-weight: 500;
         line-height: 4rem;
       }
     }
