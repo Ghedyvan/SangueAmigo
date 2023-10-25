@@ -102,7 +102,7 @@ function getBloodPercentageStyle(percentage) {
 
 function fillBloodCenterStockInfo(bloodCenterStock) {
     try {
-        const MAX_BLOOD_QUANTITY = 200;
+        const MAX_BLOOD_QUANTITY = 400;
         const bloodTypes = ['A+', 'B+', 'AB+', 'O+', 'A-', 'B-', 'AB-', 'O-'];
 
         bloodTypes.forEach((bloodType, index) => {

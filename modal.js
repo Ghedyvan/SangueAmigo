@@ -10,4 +10,3 @@ const togglemodal = (event) => {
 document.addEventListener('DOMContentLoaded', () => {
     [closeModalButton, fade].forEach((el) => el.addEventListener("click", togglemodal));
 })
-
